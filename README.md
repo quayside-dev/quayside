@@ -20,7 +20,7 @@ Quayside sits between your development environment and upstream package registri
 
 There are plans to support the following package registries:
 
-- [] **crates.io** - Rust packages
+- [ ] **crates.io** - Rust packages
 - [ ] **PyPI** - Python packages
 - [ ] **npm** - JavaScript/Node.js packages
 - [ ] **OCI Registries** - Container images (Docker Hub, ghcr.io, etc.)
