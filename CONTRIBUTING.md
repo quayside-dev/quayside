@@ -36,6 +36,7 @@ Each commit should represent a single, atomic item of work that:
 All commits **must** follow the [Conventional Commits](https://www.conventionalcommits.org/) specification.
 
 **Format:**
+
 ```
 <type>[optional scope]: <description>
 
@@ -45,6 +46,7 @@ All commits **must** follow the [Conventional Commits](https://www.conventionalc
 ```
 
 **Types:**
+
 - `feat`: A new feature
 - `fix`: A bugfix
 - `docs`: Documentation only changes
@@ -57,6 +59,7 @@ All commits **must** follow the [Conventional Commits](https://www.conventionalc
 - `chore`: Other changes that don't modify src or test files
 
 **Examples:**
+
 ```
 feat: add user authentication system
 fix: resolve memory leak in connection pool
