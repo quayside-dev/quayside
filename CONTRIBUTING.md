@@ -46,9 +46,9 @@ All commits **must** follow the [Conventional Commits](https://www.conventionalc
 
 **Types:**
 - `feat`: A new feature
-- `fix`: A bug fix
+- `fix`: A bugfix
 - `docs`: Documentation only changes
-- `style`: Changes that do not affect the meaning of the code (white-space, formatting, etc)
+- `style`: Changes that do not affect the meaning of the code (whitespace, formatting, etc)
 - `refactor`: A code change that neither fixes a bug nor adds a feature
 - `perf`: A code change that improves performance
 - `test`: Adding missing tests or correcting existing tests
