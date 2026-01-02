@@ -26,6 +26,7 @@
             claude-code
             jujutsu
             nodejs
+            nodePackages.prettier
           ];
 
           shellHook = ''
@@ -39,6 +40,13 @@
             alias ls=eza
             alias find=fd
           '';
+        };
+
+        apps.prettier = {
+          type = "app";
+          program = toString (pkgs.writeShellScript "prettier-write" ''
+            exec ${pkgs.nodePackages.prettier}/bin/prettier --write . "$@"
+          '');
         };
       }
     );
