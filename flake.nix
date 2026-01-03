@@ -4,13 +4,15 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     flake-utils.url  = "github:numtide/flake-utils";
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ...}:
+  outputs = { self, nixpkgs, flake-utils, rust-overlay, ...}:
     flake-utils.lib.eachDefaultSystem(system:
       let
+        overlays = [ (import rust-overlay) ];
         pkgs = import nixpkgs {
-          inherit system;
+          inherit system overlays;
           config.allowUnfree = true;
         };
       in
@@ -27,6 +29,7 @@
             jujutsu
             nodejs
             nodePackages.prettier
+            rust-bin.stable."1.92.0".default
           ];
 
           shellHook = ''
